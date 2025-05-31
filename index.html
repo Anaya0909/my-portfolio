@@ -16,12 +16,13 @@
     }
 
     body {
-      background-color: #f2f2f2;
-      padding-top: 60px; /* space for fixed navbar */
+      background-color: #0d1b2a; /* Midnight Blue */
+      color: #e0e0e0;
+      padding-top: 60px;
     }
 
     nav {
-      background-color: #222;
+      background-color: #1b263b;
       padding: 10px 20px;
       position: fixed;
       top: 0;
@@ -38,21 +39,27 @@
 
     nav ul li a {
       text-decoration: none;
-      color: white;
+      color: #e0e0e0;
       font-weight: bold;
+      transition: color 0.3s;
     }
 
     nav ul li a:hover {
-      color: #ffcc00;
+      color: #8ecae6; /* Neon Blue */
     }
 
     section {
       padding: 40px 20px;
-      background-color: white;
+      background-color: #1b263b;
       margin: 20px auto;
       max-width: 800px;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    h2, h3 {
+      color: #89c2d9; /* Light Cyan */
+      margin-bottom: 15px;
     }
 
     .profile-pic {
@@ -61,7 +68,7 @@
       border-radius: 50%;
       display: block;
       margin: 20px auto;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
     }
 
     .skills li {
@@ -71,15 +78,36 @@
     footer {
       text-align: center;
       padding: 20px;
-      margin-top: 20px;
+      color: #ccc;
     }
 
-    /* Smooth scroll */
+    button {
+      background-color: #8ecae6;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      color: #0d1b2a;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #219ebc;
+    }
+
+    a {
+      color: #aad8d3;
+    }
+
+    a:hover {
+      color: #8ecae6;
+    }
+
     html {
       scroll-behavior: smooth;
     }
 
-    /* Responsive Design */
     @media (max-width: 600px) {
       nav ul {
         flex-direction: column;
@@ -138,22 +166,18 @@
     </ul>
 
     <button type="button" onclick="showMessage()">Click Me!</button>
-    <p id="about-message" style="display: none; color: green; margin-top: 10px;">
+    <p id="about-message" style="display: none; color: #90ee90; margin-top: 10px;">
       Thank you for clicking! 😊
     </p>
   </section>
 
-
-
+  <!-- Contact Section -->
   <section id="contact">
-  <h2>Contact</h2>
-  <p>Email: <a href="mailto:anayasharma.dev123@gmail.com">anayasharma.dev123@gmail.com</a></p>
-  <p>GitHub: <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a></p>
-  <p>LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a></p>
-</section>
-
-
-
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:anayasharma.dev123@gmail.com">anayasharma.dev123@gmail.com</a></p>
+    <p>GitHub: <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a></p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a></p>
+  </section>
 
   <!-- Footer -->
   <footer>

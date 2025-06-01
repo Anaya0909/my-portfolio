@@ -4,7 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>My Portfolio</title>
+
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
     /* Base Styles */
@@ -16,9 +21,23 @@
     }
 
     body {
-      background-color: #0d1b2a; /* Midnight Blue */
+      background: linear-gradient(135deg, #0d1b2a, #1b263b);
       color: #e0e0e0;
       padding-top: 60px;
+      transition: background 0.5s ease;
+      animation: gradientShift 20s ease infinite;
+    }
+
+    @keyframes gradientShift {
+      0% {
+        background: linear-gradient(135deg, #0d1b2a, #1b263b);
+      }
+      50% {
+        background: linear-gradient(135deg, #1b263b, #415a77);
+      }
+      100% {
+        background: linear-gradient(135deg, #0d1b2a, #1b263b);
+      }
     }
 
     nav {
@@ -28,6 +47,7 @@
       top: 0;
       width: 100%;
       z-index: 1000;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
     }
 
     nav ul {
@@ -41,25 +61,31 @@
       text-decoration: none;
       color: #e0e0e0;
       font-weight: bold;
-      transition: color 0.3s;
+      transition: color 0.3s ease;
     }
 
     nav ul li a:hover {
-      color: #8ecae6; /* Neon Blue */
+      color: #8ecae6;
     }
 
     section {
       padding: 40px 20px;
-      background-color: #1b263b;
+      background-color: rgba(27, 38, 59, 0.9);
       margin: 20px auto;
       max-width: 800px;
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s;
+    }
+
+    section:hover {
+      transform: scale(1.01);
     }
 
     h2, h3 {
-      color: #89c2d9; /* Light Cyan */
+      color: #89c2d9;
       margin-bottom: 15px;
+      transition: color 0.3s ease;
     }
 
     .profile-pic {
@@ -69,16 +95,15 @@
       display: block;
       margin: 20px auto;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+      transition: transform 0.3s ease;
+    }
+
+    .profile-pic:hover {
+      transform: scale(1.1);
     }
 
     .skills li {
       margin-bottom: 8px;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      color: #ccc;
     }
 
     button {
@@ -89,19 +114,28 @@
       color: #0d1b2a;
       font-weight: bold;
       cursor: pointer;
-      transition: background-color 0.3s;
+      transition: background-color 0.3s ease, transform 0.2s;
     }
 
     button:hover {
       background-color: #219ebc;
+      transform: scale(1.05);
     }
 
     a {
       color: #aad8d3;
+      text-decoration: none;
+      transition: color 0.3s ease;
     }
 
     a:hover {
       color: #8ecae6;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #ccc;
     }
 
     html {
@@ -151,8 +185,8 @@
   <!-- About Section -->
   <section id="about">
     <h2>About Me</h2>
-    <img src="myphoto.jpg" alt="Photo of the developer" class="profile-pic">
-    <p>Hello! I'm a beginner web developer passionate about coding...</p>
+    <img src="myphoto.jpg" alt="Anaya Sharma photo" class="profile-pic">
+    <p>Hello! I'm a beginner web developer passionate about coding and creating useful websites.</p>
     <p class="about-text">
       I love learning new technologies and building projects!
     </p>
@@ -173,25 +207,22 @@
 
   <!-- Contact Section -->
   <section id="contact">
-    
     <h2>Contact</h2>
     <p>Email: <a href="mailto:anayasharma.dev123@gmail.com">anayasharma.dev123@gmail.com</a></p>
-    
-<p>GitHub:
-  <a href="https://github.com/Anaya0909" target="_blank">
-    <i class="fab fa-github"></i> github.com/Anaya0909
-  </a>
-</p>
-    
-   <p>LinkedIn:
-  <a href="https://www.linkedin.com/in/anaya0909" target="_blank">
-    <i class="fab fa-linkedin"></i>
-  </a>
-</p>
-    
+
+    <p>GitHub:
+      <a href="https://github.com/Anaya0909" target="_blank">
+        <i class="fab fa-github"></i> github.com/Anaya0909
+      </a>
+    </p>
+
+    <p>LinkedIn:
+      <a href="https://www.linkedin.com/in/anaya0909" target="_blank">
+        <i class="fab fa-linkedin"></i> linkedin.com/in/anaya0909
+      </a>
+    </p>
   </section>
 
-  <!-- Footer -->
   <footer>
     <p>&copy; 2025 My Portfolio</p>
   </footer>
